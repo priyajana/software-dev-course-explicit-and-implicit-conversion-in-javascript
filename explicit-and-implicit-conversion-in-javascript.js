@@ -29,3 +29,16 @@ if (isValid) {
 let age = "25";
 let totalAge = Number(age) + 5;// explicit conversion
 console.log("Total Age: " + String(totalAge));// explicit conversion
+
+//One example of implicit type conversion
+
+let checkEqual = Boolean(20 ==="20"); // prints false since one is number and the other is string
+console.log(checkEqual);
+let newCheckEqual = Boolean(20 =="20") // == equality operator checks if values are equal, string "20" is implicitly converted for comparison
+console.log(newCheckEqual);
+
+//One example of explicit type conversion
+let isSnowing = null;
+console.log(typeof(isSnowing));
+console.log(Boolean(isSnowing));
+console.log(typeof(Boolean(isSnowing)));
