@@ -1,5 +1,4 @@
 /*
-
 Part 1: Debugging Challenge
 The JavaScript code below contains intentional bugs related to type conversion.
 Please do the following:
@@ -15,18 +14,18 @@ Write their own code that demonstrates:
   *We encourage you to:
 Include at least one edge case, like NaN, undefined, or null .
 Use console.log() to clearly show the before-and-after type conversions.
-
 */
 
 
-let result = "5" - 2;
-console.log("The result is: " + result);
+let result = Number("5" )- 2; // explicit conversion
+console.log("The result is: "+result);
 
+// Boolean of any value other than null, "", NaN, undefined, false is true. Hence the string "false" evaluates to true and the console.log is printed.
 let isValid = Boolean("false");
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
-console.log("Total Age: " + totalAge);
+let totalAge = Number(age) + 5;// explicit conversion
+console.log("Total Age: " + String(totalAge));// explicit conversion
